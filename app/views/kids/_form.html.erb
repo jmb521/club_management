@@ -1,0 +1,9 @@
+<%= form_for @kid do |kid| %>
+  Name:  <%= kid.text_field :kid_name %>
+  <br />
+  Birthday: <%= kid.text_field :kid_birthday %>
+  <br />
+
+  <%= kid.hidden_field :profile_id, :value => params[:profile_id] %>
+  <%= kid.submit %>
+<% end %>
