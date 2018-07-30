@@ -1,0 +1,16 @@
+<h1>User Profile </h1>
+<br />
+<br />
+
+
+<p><%= @profile.user.email %></p>
+<p><%= @profile.first_name %></p>
+<p><%= @profile.last_name %></p>
+<p><%= @profile.address1 %></p>
+<p><%= @profile.address2 %></p>
+<p><%= @profile.city %></p>
+<p><%= @profile.state %></p>
+<p><%= @profile.zipcode %></p>
+<p><%= @profile.phone %></p>
+
+<%= link_to "Edit", edit_profile_path(@profile) %>
