@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-    @profile = Profile.find_by(:id => params[:id])
+    @profile = Profile.find(params[:id])
 
   end
 
