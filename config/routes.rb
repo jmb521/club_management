@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
-  resources :families
-  resources :membership_infos
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+  resources :profiles, only: [:show, :edit, :update]
   resources :kids
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :families, only: [:show, :edit, :update]
+  resources :membership_infos, only: [:show, :edit, :update]
+  scope "/admin" do
+    resources :users do
+      resources :profiles
+      resources :membership_infos
+      resources :kids
+      resources :families
+    end
+end
 
   get '/' => "application#home"
+  get '/user_home' => "application#user_home"
+
 end
