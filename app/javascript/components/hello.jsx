@@ -11,8 +11,7 @@ class Hello extends React.Component {
   render() {
     return(
       <div>
-        {this.props.name}
-        <p>Test</p>
+        
         </div>
     )
   }
