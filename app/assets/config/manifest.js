@@ -1,3 +1,10 @@
 //= link_tree ../images
 //= link_directory ../javascripts .js
 //= link_directory ../stylesheets .css
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
+//= require semantic_ui/semantic_ui
+//= require_self
+//= require_tree .
+//= require turbolinks
