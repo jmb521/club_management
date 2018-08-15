@@ -15,10 +15,10 @@ class User < ApplicationRecord
   after_create :create_family
   after_create :create_membership_info
 
-    enum role: [:user, :vip, :admin]
+    enum role: [:applicant, :user, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role
-    self.role ||= :user
+    self.role ||= :applicant
   end
 end
